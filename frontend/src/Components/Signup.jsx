@@ -19,7 +19,7 @@ const Signup = () => {
     console.log('User data:', userData);
     
 
-    const url = `http://localhost:5000/api/register`;
+    const url = `${import.meta.env.BASE_URL}api/register`;
    
     const response = await  axios.post(url, userData)
 

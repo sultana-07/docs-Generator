@@ -17,7 +17,7 @@ const Login = () => {
       password,
     };
 
-    const url = `http://localhost:5000/api/login`;
+    const url = `${import.meta.env.BASE_URL}api/login`;
     try {
       const response = await axios.post(url, userData);
       const data = response.data;

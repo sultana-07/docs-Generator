@@ -218,7 +218,7 @@ const Home = () => {
     setLoading(true);
     setDocument('');
     try {
-      const response = await fetch('http://localhost:5000/api/docs/upload', {
+      const response = await fetch(`${import.meta.env.BASE_URL}api/docs/upload`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
