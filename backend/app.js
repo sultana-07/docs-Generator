@@ -4,9 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const userRouters = require('./Routers/userRouters');
 const docsRouters = require('./Routers/docsRouters');
-
-const connectDB = require('./database/db');
 dotenv.config();
+const connectDB = require('./database/db');
+
 // Load environment variables from .env file
 connectDB(); // Connect to the database
 
