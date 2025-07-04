@@ -19,10 +19,10 @@ const Signup = () => {
     console.log('User data:', userData);
     
 
-    const url = `${import.meta.env.BASE_URL}api/register`;
+    const url = `${import.meta.env.BASE_URL}/api/register`;
    
     const response = await  axios.post(url, userData)
-
+    console.log('Response:', response);
    
 
     if(response.status != 201) {
