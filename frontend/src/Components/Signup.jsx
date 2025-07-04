@@ -23,12 +23,12 @@ const Signup = () => {
    
     const response = await  axios.post(url, userData)
 
-    const data = response.data;
+   
 
     if(response.status != 201) {
       alert('Signup failed. Please try again.');
     }else {
-      alert('Signup successful! Redirecting to login page...');
+    
        navigate('/login');
     }
 
