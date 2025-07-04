@@ -12,7 +12,11 @@ connectDB(); // Connect to the database
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-app.use(cors("*")); // Allow all origins for CORS
+app.use(cors({
+  origin: ["https://docs-genapp.vercel.app"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
