@@ -1,10 +1,11 @@
 const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const userRouters = require('./Routers/userRouters');
 const docsRouters = require('./Routers/docsRouters');
-dotenv.config();
+
 const connectDB = require('./database/db');
 
 // Load environment variables from .env file
