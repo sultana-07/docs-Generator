@@ -19,7 +19,7 @@ const Signup = () => {
     console.log('User data:', userData);
     
 
-    const url = `${import.meta.env.BASE_URL}/api/register`;
+    const url = `https://docsgen-nu.vercel.app/api/register`;
    
     const response = await  axios.post(url, userData)
     console.log('Response:', response);
