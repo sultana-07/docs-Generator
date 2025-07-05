@@ -99,6 +99,10 @@ const Signup = () => {
               </button>
             </div>
           </div>
+
+          {password.length < 6 && password.length > 0 && (
+            <p className="text-red-500 text-sm mt-1">Password must be at least 6 characters long.</p>
+          )}
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
