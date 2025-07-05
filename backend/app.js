@@ -5,18 +5,20 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const userRouters = require('./Routers/userRouters');
 const docsRouters = require('./Routers/docsRouters');
+const app = express();
 
 const connectDB = require('./database/db');
 
 // Load environment variables from .env file
 connectDB(); // Connect to the database
-
-const app = express();
-const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin : '*',
   credentials : true
 }));
+
+
+const PORT = process.env.PORT || 5000;
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.get('/', (req, res) => {
