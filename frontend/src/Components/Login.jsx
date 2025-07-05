@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';    
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,11 +7,12 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin =  async(e) => {
     e.preventDefault();
-    
+    setLoading(true);
     const userData = {
       email,
       password,
@@ -36,10 +37,10 @@ const Login = () => {
       alert('Login failed. Please check your credentials and try again.');
     }
 
-     
-      setEmail('');
-      setPassword('');
-      setShowPassword(false);
+    setLoading(false);
+    setEmail('');
+    setPassword('');
+    setShowPassword(false);
   }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-400">
@@ -91,7 +92,7 @@ const Login = () => {
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
           >
-            Login
+           {loading ? 'Loading...' : 'Login'}
           </button>
         </form>
         <div className="flex justify-between items-center mt-4">

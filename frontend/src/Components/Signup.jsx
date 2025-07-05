@@ -8,10 +8,12 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const userData = {
       username : name ,
       email,
@@ -33,7 +35,7 @@ const Signup = () => {
        navigate('/login');
     }
 
-   
+   setLoading(false);
 
     
     setName('');
@@ -107,7 +109,7 @@ const Signup = () => {
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
           >
-            Sign Up
+           {loading ? 'Loading...' : 'Sign Up'}
           </button>
         </form>
         <div className="flex justify-center items-center mt-4">

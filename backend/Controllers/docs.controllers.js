@@ -15,17 +15,17 @@ const uploadDocument = async (req, res) => {
 
         // Generate documentation for the uploaded file
         const docContent = file.body.content
-        console.log('File content:', docContent);
+     
         
         const documentation = await generateDocs(docContent);
-        console.log('Generated documentation:', documentation);
+        
         
         return res.status(200).json({
            
             documentation
         });
     } catch (error) {
-        console.error('Error uploading document:', error);
+       
         return res.status(500).json({ message: 'Internal server error' });
     }
 };
