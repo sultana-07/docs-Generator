@@ -1,6 +1,7 @@
-import React, { useState, } from 'react';
+import  { useState, } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -107,7 +108,7 @@ const Signup = () => {
         </form>
         <div className="flex justify-center items-center mt-4">
           <span className="text-gray-600 text-sm">Already have an account?</span>
-          <a href="/login" className="ml-2 text-blue-500 hover:underline text-sm">Login</a>
+          <Link to="/login" className="ml-2 text-blue-500 hover:underline text-sm">Login</Link>
         </div>
       </div>
     </div>
