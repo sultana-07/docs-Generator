@@ -59,13 +59,13 @@ const Navbar = () => {
             <div className="flex space-x-4 ml-6">
               {!token ? (
                 <>
-                  <Link to="/login" className="py-2 px-4 bg-blue-500 text-white text-sm rounded-full hover:bg-blue-600 transition">Login</Link>
-                  <Link to="/signup" className="py-2 px-4 bg-green-500 text-white text-sm rounded-full hover:bg-green-600 transition">Sign Up</Link>
+                  <Link to="/login" className="py-2 px-4 bg-blue-500 text-white text-sm rounded-full hover:bg-blue-600 transition cursor-pointer">Login</Link>
+                  <Link to="/signup" className="py-2 px-4 bg-green-500 text-white text-sm rounded-full hover:bg-green-600 transition cursor-pointer">Sign Up</Link>
                 </>
               ) : (
                 <button
                   onClick={handleLogout}
-                  className="py-2 px-4 bg-red-500 text-white text-sm rounded-full hover:bg-red-600 transition"
+                  className="py-2 px-4 bg-red-500 text-white text-sm rounded-full cursor-pointer hover:bg-red-600 transition"
                 >
                   Logout
                 </button>

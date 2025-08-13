@@ -260,7 +260,7 @@ const Home = () => {
         />
         <button
           onClick={() => fetchRepos(url)}
-          className="p-2 px-6 rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition flex items-center justify-center min-w-[100px]"
+          className="p-2 px-6 cursor-pointer rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition flex items-center justify-center min-w-[100px]"
           disabled={repoLoading}
         >
           {repoLoading ? (
@@ -313,11 +313,11 @@ const Home = () => {
             </button>
             <button
               onClick={handleRoot}
-              className="ml-2 px-3 py-1 rounded bg-gray-100 hover:bg-blue-100 text-blue-600 text-xs font-semibold"
+              className="ml-2 px-3  cursor-pointer py-1 rounded bg-gray-100 hover:bg-blue-100 text-blue-600 text-xs font-semibold"
             >
               Root
             </button>
-            <span className="ml-2 text-xs text-gray-500 truncate max-w-[120px]">{currentPath || 'root'}</span>
+            <span className="ml-2 cursor-pointer text-xs text-gray-500 truncate max-w-[120px]">{currentPath || 'root'}</span>
           </div>
           <div className="flex-1 overflow-y-auto custom-scrollbar">
             {repoLoading ? (
@@ -361,10 +361,10 @@ const Home = () => {
           style={{ maxHeight: 'calc(100vh - 80px)', height: 'calc(100vh - 80px)' }}
         >
           <div className="flex justify-between items-center p-4 border-b bg-white">
-            <h2 className="text-xl font-semibold">Code</h2>
+            <h2 className="text-xl font-semibold ">Code</h2>
             <button
               onClick={handleGenerateDocs}
-              className="p-2 px-4 rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition"
+              className="p-2 px-4 rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition cursor-pointer"
               disabled={!content}
             >
               Generate Docs
@@ -388,7 +388,7 @@ const Home = () => {
             <h2 className="text-xl font-semibold">Documentation</h2>
             <button
               onClick={handleCopy}
-              className="p-2 px-4 rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition"
+              className="p-2 px-4 rounded-xl text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition cursor-pointer"
             >Copy</button>
           </div>
           <div className="flex-1 overflow-auto p-2">
