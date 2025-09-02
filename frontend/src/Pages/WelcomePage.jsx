@@ -6,7 +6,7 @@ const WelcomePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex items-center justify-center px-2 py-8">
       <div className="bg-white shadow-2xl rounded-3xl max-w-4xl w-full p-6 md:p-12 flex flex-col items-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-blue-600 mb-4 text-center">
-          Welcome to Code Gen
+          Welcome to Code Generator
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-8 text-center max-w-2xl">
           Instantly generate beautiful, AI-powered documentation for your codebase. 
